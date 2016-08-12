@@ -1,4 +1,4 @@
-# C++ Fast-Forward
+ljfisdkjfk C++ Fast-Forward
 This readme will tell about important syntax and concepts in cpp.
 
 ##Classes: 
@@ -9,3 +9,14 @@ This readme will tell about important syntax and concepts in cpp.
 ##Declarations: 
 * int a : only memory allocated, garbage is present. 
 * int\* a: might not be equal to NULL(***especially in classes***), set it manually. 
+
+##STL : 
+```
+#include<bits/stdc++.h>
+```
+
+##Queue
+- queue<int> q;
+- q.push(1), q.pop() returns nothing, q.empty(), q.size(), q.front(), q.back()
+- q.back() return ***Seg Fault*** on uninitialized queue, q.front() returns 0. 
+
