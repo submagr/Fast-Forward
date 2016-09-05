@@ -10,6 +10,8 @@ This readme will tell about important syntax and concepts in cpp.
 * int a : only memory allocated, garbage is present. 
 * int\* a: might not be equal to NULL(***especially in classes***), set it manually. 
 
+##memset: 
+:
 ##STL : 
 ```
 #include<bits/stdc++.h>
