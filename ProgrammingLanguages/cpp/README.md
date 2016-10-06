@@ -1,4 +1,4 @@
-ljfisdkjfk C++ Fast-Forward
+#C++ Fast-Forward
 This readme will tell about important syntax and concepts in cpp.
 
 ##Classes: 
@@ -21,4 +21,13 @@ This readme will tell about important syntax and concepts in cpp.
 - queue<int> q;
 - q.push(1), q.pop() returns nothing, q.empty(), q.size(), q.front(), q.back()
 - q.back() return ***Seg Fault*** on uninitialized queue, q.front() returns 0. 
+
+#C Fast-Forward
+### Storage classes in C: 
+- There are three concepts:
+	- Blocks: Are group of code statements which are treated as units for the purpose of defining scope.
+	- LifeTime: Variable creation and deletion time
+	- Scope: Area of code within which the variable can be accessed
+	- Visiblity: is the "accessiblity" of variable. It is the result of hiding the variable in outer scope.
+	- Really nice explaination: [link](http://opensourceforu.com/2011/10/joy-of-programming-scope-lifetime-and-visibility-in-c/)
 
