@@ -35,5 +35,57 @@ class A():
 		self.x = "This will be initialized when you create class instant. classObject = A()"			
 ```
 
-## if \_\_name\_\_ == \_\_main\_\_: \_\_main\_\_: 
+## if \_\_name\_\_ == "\_\_main\_\_":
 - It is used when we want to write a module that itself can be executed
+
+## List Comprehension: 
+```python 
+[x for x in range(0,10)]
+[(i,j) for i in range(0, 10) for j in range(0, 10)]
+[x for x in range(0, 10) if x%2 == 0]
+```
+
+## Lambda
+- Syntax: lambda argument\_list: expression 
+	```python 
+	f = lambda x,y: x+y
+	```
+
+## Map function:
+- Syntax: map(function, input-list)
+	```python 
+	>>> f = lambda x: x*x
+	>>> map(f, [1, 2, 3, 4])
+	[1, 4, 9, 16]
+
+	>>> a = [1,2,3,4]
+	>>> b = [17,12,11,10]
+	>>> c = [-1,-4,5,9]
+	>>> map(lambda x,y,z:x+y+z, a,b,c)
+	[17, 10, 19, 23]
+	```
+
+## IsEmpty:
+- For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
+	```python
+	Yes: if not seq:
+		 if seq:
+
+	No:  if len(seq):
+		 if not len(seq):
+	```
+## Numpy functionalities:
+
+## Error commited in past:
+- ```python 
+	>>> length = 2
+	>>> [[[]]*length]*length
+	>>> a = [[[]]*length]*length
+	>>> a
+	[[[], []], [[], []]]
+	>>> a[0]
+	[[], []]
+	>>> a[0][0] = 1
+	>>> a
+	[[1, []], [1, []]]
+  ```
