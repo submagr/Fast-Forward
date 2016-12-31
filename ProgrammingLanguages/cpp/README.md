@@ -2,33 +2,54 @@
 This readme will tell about important syntax and concepts in cpp.
 
 ## Classes: 
-* Class-declaration : 
-	- object Myobject : Will do static allocation, i.e., object will be deleted after function returns. 
-	- object * Myobject = new object(): Will do dynamic allocation on heap. One has to delete manually from heap after use. Similar to malloc. [stack overflow](http://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself)
+```cp
+class person{
+	private:
+		int income;
+		int education;
+		int password;
+	public:
+		string name;
+		bool checkQualification(){
+			/*Write code for check qualification here*/
+		} // No Semicolon here
+		bool matchPassword(string inputPassword); // The function can be defined here or later
+}; // Don't forget the semicolon
 
-## Declarations: 
-* int a : only memory allocated, garbage is present. 
-* int \*a: might not be equal to NULL(***especially in classes***), set it manually. 
-* new : Creates and initializes objects with dynamic storage duration(i.e. object whose lifetime is not limited by the scope in which they are created). new operator is confused with other operator new[] which is used for allocating arrays.
-	- Syntax: 
+bool person::matchPassword(string inputPassword){
+	/*Code for password match here*/	
+	cout << "Person Name: " << this.name;
+}
+```
+### Class-Declaration: 
+
+- ***Static Allocation*** : Object will be deleted after function returns. 
 	```cpp
-	[new datatype]
-	int *a = new int ;
-	myClass *b = new myClass;
-	myStruct *c = new myStruct;
-
-	delete a;
-	delete b;
-	delete c;
+	object Myobject
 	```
-	- Procedure: It first allocates space on ***heap*** and then constructs object by calling constructor.
+- ***Dynamic Allocation*** : Will do dynamic allocation on heap. One has to delete manually from heap after use. Similar to malloc. 
+	* new : Creates and initializes objects with dynamic storage duration(i.e. object whose lifetime is not limited by the scope in which they are created). new operator is confused with other operator new[] which is used for allocating arrays.
+		- Procedure: It first allocates space on ***heap*** and then constructs object by calling constructor.
+		```cpp
+		[new datatype]
+		int *a = new int ;
+		myClass *b = new myClass;
+		myStruct *c = new myStruct;
 
-* new[]: for arrays
-	- Syntax: 
-	```cpp
-	myClass *a = new myClass[5];
-	delete[] a;
-	```
+		delete a;
+		delete b;
+		delete c;
+		```
+
+	* new[]: 
+		- for arrays
+		```cpp
+		myClass *a = new myClass[5];
+		delete[] a;
+		```
+- Remarks: 
+	* Very good explanation on "When to use Dynamic vs Static Allocation" : [stack overflow](http://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself)
+	* Always initializes a ptr with NULL. 
 
 ## STL : 
 - To include all functionalities of STL, use following code snippet:
@@ -92,25 +113,6 @@ int M, N;
 vector< vector<int> > Matrix(M, vector<int>(N, -1))
 ```
 ## Class
-```cp
-class person{
-	private:
-		int income;
-		int education;
-		int password;
-	public:
-		string name;
-		bool checkQualification(){
-			/*Write code for check qualification here*/
-		} // No Semicolon here
-		bool matchPassword(string inputPassword); // The function can be defined here or later
-}; // Don't forget the semicolon
-
-bool person::matchPassword(string inputPassword){
-	/*Code for password match here*/	
-	cout << "Person Name: " << this.name;
-}
-```
 
 # C Fast-Forward
 
