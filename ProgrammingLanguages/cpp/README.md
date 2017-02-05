@@ -2,7 +2,7 @@
 This readme will tell about important syntax and concepts in cpp.
 
 ## Classes: 
-```cp
+```cpp
 class person{
 	private:
 		int income;
@@ -24,9 +24,9 @@ bool person::matchPassword(string inputPassword){
 ### Class-Declaration: 
 
 - ***Static Allocation*** : Object will be deleted after function returns. 
-	```cpp
-	object Myobject
-	```
+```cpp
+object Myobject
+```
 - ***Dynamic Allocation*** : Will do dynamic allocation on heap. One has to delete manually from heap after use. Similar to malloc. 
 	* new : Creates and initializes objects with dynamic storage duration(i.e. object whose lifetime is not limited by the scope in which they are created). new operator is confused with other operator new[] which is used for allocating arrays.
 		- Procedure: It first allocates space on ***heap*** and then constructs object by calling constructor.
