@@ -22,7 +22,6 @@ bool person::matchPassword(string inputPassword){
 }
 ```
 ### Class-Declaration: 
-
 - ***Static Allocation*** : Object will be deleted after function returns. 
 ```cpp
 object Myobject
@@ -57,9 +56,17 @@ object Myobject
 #include<bits/stdc++.h>
 ```
 - Three major concepts of STL are:
-	* Containers
-	* Templates
-	* Iterators
+	* Containers - They hold multiple data elements
+	* Templates  - They can be used with any of standard C++ data or user-defined datatypes. 
+	* Iterators  - 
+
+### Sort
+- Can be done on vector elements
+- Sort [first, last)
+```cpp
+#include<algorithm> // For sort
+std::sort(myvector.begin(), myvector.end()) ;
+```
 
 ### Queue
 - queue<int> q;
@@ -76,7 +83,6 @@ st.top(); // returns the reference to top element in stack
 st.pop();  // remove top element
 ```
 
-
 ### List
 Implemented as doubly linked list.
 ```cpp
@@ -86,6 +92,7 @@ myList.push\_front(2); // head, 2, 1
 myList.empty(); // false
 myList.push_back(3); // head, 2, 1, 3 
 ```
+
 ### Priority Queue
 - For heap
 ```cpp
@@ -112,7 +119,20 @@ vector< vector<int> > Matrix
 int M, N;
 vector< vector<int> > Matrix(M, vector<int>(N, -1))
 ```
-## Class
+
+### Map
+## Input Output
+- scanf while reading single characters also reads the available '\n' character. To ignore it: 
+```cpp
+// Wrong
+scanf("%c", &temp);
+// Right : Following code ignores any incoming \n characters
+scanf(" %c", &temp); 
+```
+
+- CPP initialization of variables to zero => Confirm this once (TODO)
+
+### CLIMITS // TODO
 
 # C Fast-Forward
 
