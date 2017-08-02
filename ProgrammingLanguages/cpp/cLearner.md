@@ -42,6 +42,10 @@ CA obj;
     *  When u have a virtual function and don't have a constructor
     * <TODO: 5th day>
 - Assume some pre-construction and post-construction jobs. So we use factory and creators
+- Move, explicit with multi param, 
+- Explicit keyword: not allow copy-initialization
+- Perfect forwarding constructor
+- Ownership transfer
 
 ## Destructor 
 - 
@@ -118,6 +122,12 @@ auto AddFun(T1 x, T2 y)->decltype(x+y){
 
 
 ## Template:
+- **Template bloating**: Every time consumer demand new datatype, every function inside template class is repeated irrespective of some generic functions that do not depend on template type. We can prevent them from recreating every time:
+    * Create common base class for template function
+    * NOTE: It's the biggest harm while developing libraries.
+- Variadic Templates: 
+    * <TODO>: Lookup std args 
+
 
 ## Exception Handling: 
 - Own terminate function: set\_terminate(<customTerminateFunction>):
@@ -129,6 +139,8 @@ auto AddFun(T1 x, T2 y)->decltype(x+y){
 - <TODO> This catch table is messy, sort it out.
 - empty throw rethrows the exception from **catch table**, not from catch block.
 - catch(...) If no other catches match, then this catches
+
+## Iterators:
 
 ## Miscellaneous:
 - size of empty class is 1 due to **this** pointer 
@@ -176,3 +188,16 @@ int arr[5]{1, 2, 3, 4, 5};
 - Whenever equate two objects: bitwise copy occur: ie Copy constructor is called: 
 - Value objects: deep copy
 - rvalue object: for return value
+- Braced Initialization in c++11. Can use it with equal to or without equal to
+    * If marked "explicit" in front of constructor, can't use equal to to assign.
+- Member initialization new in C++
+- <TODO> : When did constructors of object within a class are called
+- SmartPointers: Context was how to create a class which can only be created via new
+- Casting operator
+- Lazy load, lazy 
+
+## HW:
+- Variadic templates with class
+- No throw new and placement new
+- Body Handle Technique
+- Identify two apis called mem\_fn, bind, tie and ref
