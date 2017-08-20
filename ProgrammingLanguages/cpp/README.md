@@ -134,6 +134,9 @@ scanf(" %c", &temp);
 
 ### CLIMITS // TODO
 
+### DEBUGGING
+### Precedence
+- a*\**b, a/b, a%b : Same Precedence
 # C Fast-Forward
 
 ## Storage classes in C: 
