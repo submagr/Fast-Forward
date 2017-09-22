@@ -1,94 +1,111 @@
-A JavaScript function is a block of JavaScript code, that can be executed when "asked" for.
-For example, a function can be executed when an event occurs, like when the user clicks a button.
-
-It is a good idea to place scripts at the bottom of the <body> element.
+# Javascript
+## Syntax
+- It is a good idea to place scripts at the bottom of the <body> element.
 This can improve page load, because script compilation can slow down the display.
-
-script can also be placed in external files. Don't put <script> tags in external files.
-To import script use : 
+- script can also be placed in external files. Don't put <script> tags in external files. To import script use : 
+```javascript
 <script src="myScript.js"></script>
+```
 The script will behave as if it was located exactly where the <script> tag is located.
+```javascript
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+```
+- Javascript outputs : 
+	* Writing into an alert box, using window.alert().
+	* Writing into the HTML output using document.write(). -- Should be used only for testing
+	* Writing into an HTML element, using innerHTML.
+	* Writing into the browser console, using console.log().
+- JavaScript statements are separated by semicolons.To be on safe side - always insert semicolons
+- String concatenation : 'a'+ ' '+ 'b' == 'a b'
+- Comments : /* */ or //
+- **Variables are case sensitive**
+- Uninitialized variables will have value **undefined**
+- variable type : typeof(var) 
+- ++,+= both are available
+- === : equal value and type
+- Arrays : var cars = ["Saab", "Volvo", "BMW"]; 
+- Objects : 
+```javascript
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue",
+    fullName: function(){
+        return this.firstName+ " " + this.lastName
+    }
+};
+person['firstName'] or person.firstName is OK
+person.fullName()
 
-functions: 
-	<script>
-	function myFunction() {
-		document.getElementById("demo").innerHTML = "Paragraph changed.";
-	}
-	</script>
+// Object Constructor 
+function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+var myFather = new person("John", "Doe", 50, "blue");
+var myMother = new person("Sally", "Rally", 48, "green");
 
-Javascript outputs : 
-	Writing into an alert box, using window.alert().
-	Writing into the HTML output using document.write(). -- Should be used only for testing
-	Writing into an HTML element, using innerHTML.
-	Writing into the browser console, using console.log().
-
-JavaScript statements are separated by semicolons.To be on safe side - always insert semicolons
-
-String concatenation : 'a'+ ' '+ 'b' == 'a b'
-
-Comments : /* */ or //
-
-**Variables are case sensitive**
-
-Uninitialized variables will have value **undefined**
-
-variable type : typeof(var) 
-
-++,+= both are available
-
-=== : equal value and type
-
-Arrays : var cars = ["Saab", "Volvo", "BMW"]; 
-
-Objects : 
-	var person = {
-		firstName:"John",
-		lastName:"Doe",
-		age:50,
-		eyeColor:"blue",
-		fullName: function(){
-			return this.firstName+ " " + this.lastName
-		}
-	};
-	person['firstName'] or person.firstName is OK
-	person.fullName()
-	
-	// Object Constructor 
-	function person(first, last, age, eye) {
-		this.firstName = first;
-		this.lastName = last;
-		this.age = age;
-		this.eyeColor = eye;
-	}
-	var myFather = new person("John", "Doe", 50, "blue");
-	var myMother = new person("Sally", "Rally", 48, "green");
-	
-	var x = y
-	x is not copy of y, **x is y**
-	**Objects are mutable, they are addressed by reference**
-			
-
-null : In JavaScript null is "nothing". It is supposed to be something that doesn't exist.You can empty an object by setting it to null. typeof(null) is object
-
-SCOPE : 
-JavaScript has function scope: The scope changes inside functions.
-**If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.**
-
-EVENTS: 
+var x = y
+// x is not copy of y, **x is y**
+```
+- null : In JavaScript null is "nothing". It is supposed to be something that doesn't exist.You can empty an object by setting it to null. typeof(null) is object
+- SCOPE : 
+    * JavaScript has function scope: The scope changes inside functions.
+    * **If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.**
+- ERRORS: 
+```javascript
+try {
+    Block of code to try
+}
+catch(err) {
+    err.msg
+    Block of code to handle errors
+} 
+finally {
+    Block of code to be executed regardless of the try / catch result
+}
+```
+## With HTML:
+- EVENTS: 
+```html
 <some-HTML-element some-event='some JavaScript'>
+```
+- HTML DOM : 
+	* HTML DOM methods are actions you can perform (on HTML Elements).  
+	* HTML DOM properties are values (of HTML Elements) that you can set or change.
 
-ERRORS: 
-	try {
-		Block of code to try
-	}
-	catch(err) {
-		err.msg
-		Block of code to handle errors
-	} 
-	finally {
-		Block of code to be executed regardless of the try / catch result
-	}
+## Objects:
+- JS has one complex datatype: Object. Other five are simple datatypes: Number, String, Boolean, Undefined and Null
+- Simple datatypes are immutable(can't be altered). Objects are mutable
+- An object is an unordered list of primitive data types (and sometimes reference data types)
+- ***Reference data type vs Primitive data types****:
+    * Ref. Data type value are stored as reference. 
+    * Primitive data type value are stored at variable
+- Owned and inherited properties
+    * All object inherit properties like (hasOwnProperty) from Object.prototype
+    * To check for a property, use: (propertyToCheck in correspondingObject)
+    * We cannot delete properties that were inherited
 
-HTML DOM : 
-	HTML DOM methods are actions you can perform (on HTML Elements).  
-	HTML DOM properties are values (of HTML Elements) that you can set or change.
+## Prototypes:
+- Every js function has a prototype property (which is empty initially)
+- We attach properties and method on this prototype property when we want to implement inheritence
+- ***Prototype Attribute***:
+    * Think of it as a characterstic of the object. This characterstics tells us the object's parent
+    * The prototype attribute is normally referred as prototype object and is created simultaneously with object creation
+- All objects created with Object literal (var a = {};) or Object constructor (var a = new Object();)
+- Objects created with constructor function get their prototype from constructor function
+- All inheritence in js is made possible through prototype property
+```javascript
+function PersonClassConstructor(fn, ln){ // Notice the use of capital first letter for functions which are constructors
+    this.firstname = fn;
+    this.lastname = ln;
+}
+```
+
