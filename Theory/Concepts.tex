@@ -1,36 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% University Assignment Title Page 
-% LaTeX Template
-% Version 1.0 (27/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
-% Instructions for using this template:
-% This title page is capable of being compiled as is. This is not useful for 
-% including it in another document. To do this, you have two options: 
-%
-% 1) Copy/paste everything between \begin{document} and \end{document} 
-% starting at \begin{titlepage} and paste this into another LaTeX file where you 
-% want your title page.
-% OR
-% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
-% move this file to the same directory as the LaTeX file you wish to add it to. 
-% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
-% title page.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\title{Title page with logo}
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[12pt]{article}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
@@ -48,241 +15,80 @@
 
 \begin{document}
 
-\begin{titlepage}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
-\center % Center everything on the page
- 
-%----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
-%----------------------------------------------------------------------------------------
-
-\textsc{\LARGE Indian Institute of Technology, Kanpur}\\[1.5cm] % Name of your university/college
-%\textsc{\Large Important Concepts}\\[0.5cm] % Major heading such as course name
-%\textsc{\large Interim Report and Early Results}\\[0.5cm] % Minor heading such as course title
-
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\HRule \\[0.4cm]
-{ \huge \bfseries Important Concepts}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
- 
-%----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
-%----------------------------------------------------------------------------------------
-
-
-
-% If you don't want a supervisor, uncomment the two lines below and remove the section above
-\Large \emph{Author:}\\
-Shubham Agrawal\\[3cm] % Your name
-
-%----------------------------------------------------------------------------------------
-%	DATE SECTION
-%----------------------------------------------------------------------------------------
-
-{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
-
-%----------------------------------------------------------------------------------------
-%	LOGO SECTION
-%----------------------------------------------------------------------------------------
-
-
- 
-%----------------------------------------------------------------------------------------
-
-\vfill % Fill the rest of the page with whitespace
-
-\end{titlepage}
-
-
-\begin{abstract}
-There are various concepts in probability theory and linear algebra that we keep on forgetting and they keep haunting us throughout our lifetime. I attempt to list and explain a few of them, which I myself need very much. 
-\end{abstract}
-
-\section{Eigen vectors and Eigen Values}
-\section{Eigen Value decomposition}
-\section{Singular value decomposition}
-\section{Gram Schmidt Orthogonalization}
-\section{Positive Definite Matrix}
-	A symmetric (Hermitian) $n \times n$ real ( complex) matrix $M$ is said to be Positive Definite if $z^TMz > 0$ for every non-zero vector $z$. In case of positive semidefinite, $z^TMz \ge 0$. 
+	\begin{titlepage}
+		
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % 
+		\center % Center everything on the page
+		 
+		\textsc{\LARGE Indian Institute of Technology, Kanpur}\\[1.5cm] 
+		
+		
+		\HRule \\[0.4cm]
+		{ \huge \bfseries Important Concepts}\\[0.4cm] % Title of your document
+		\HRule \\[1.5cm]
+		 
+		\Large \emph{Author:}\\
+		Shubham Agrawal\\[3cm] % Your name
+		
+		
+		{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+		
+		\vfill % Fill the rest of the page with whitespace
 	
-	\subsection{Properties of Positive definite matrix}
-		Let $M$ be an $n \times n$ symmetric matrix.
-		\begin{itemize}
-			\item All it's eigen values are positive. 
-			\item For any real invertible matrix $A$, $A^{T}A$ is positive definite
-		\end{itemize}
-\section{Covariance Matrix}
-Let $\textbf{X} = \{X_1, X_2 \cdots X_n\}$ be a random vector. Then, 
-\begin{equation}
-Cov(\textbf{X}) = [\Sigma]_{n \times n} 
-\end{equation}
-where $\Sigma_{ij} = cov(X_i, X_j) = E((X_i - \mu_i)(X_j - \mu_j))$
-\\
-Also, Let $\textbf{Y} = \{Y_1, Y_2 \cdots Y_m\}$ be another random vector. Then, 
-\begin{equation}
-Cov(\textbf{X, Y}) = E({(\textbf{X} - \mu_\textbf{X})}^T(\textbf{Y} - \mu_\textbf{Y})) = [\Sigma]_{n \times m}
-\end{equation}
-
-\subsection{Covariance}
-Covariance means how two things(random variables $X_1$ and $X_2$) vary with respect to each other. If on increase of $X_1$, $X_2$ increases and on decrease of $X_1$, $X_2$ decreases, we say covariance is positive. If on increase of $X_1$, $X_2$ decreases and vice versa, we say that covariance is negative. Covariance is 0 if no such relation exists. Understanding the magnitude of covariance is difficult. 
-\\
-Mathematically, let $X_1$ and $X_2$ are two real valued random variables. Then Cov($X_1$, $X_2$) = $E[X_1 - \mu_1)\times(X_2-\mu_2)]$
-\subsection{Random Variable}
-Random variable is a function that maps outcomes of an event to mathematically convenient form (real numbers). For example: Let our event be "\textit{A coin is tossed 30 times}" and let random variable be \textbf{Number of heads occured while tossing 30 times}
-
-\subsection{Properties of Covariance Matrices}
-\begin{itemize}
-\item Symmetric
-\item If ($m = n$)
-\end{itemize}
-\subsection{Random Vector}
-Random vector are used when you want to view multiple events simultaneously. For example: You want to observe tossing of coin ($X_1$) and rolling of dice ($X_2$) simultaneously. Then, you define random vector $\textbf{X} = \{X_1, X_2\}$. Here $X_1: {-1,1}$ and $X_2: {1,2,3,4,5,6}$. In more machine learning pov, you have random vector as your feature set where each feature is a random variable.
-
-
-\section{PCA}
-\section{Positive Definite Matrices and It's Properties}
-\section{Dataset}
-The dataset that we chose to work on was the \href{https://www.kaggle.com/benhamner/nips-2015-papers}{nips-2015-papers} available on Kaggle. The main csv file of the dataset contains the following:
-\begin{itemize}
-\item Id - unique identifier for the paper (equivalent to the one in NIPS's system)
-\item Title - title of the paper
-\item EventType - whether it's a poster, oral, or spotlight presentation
-\item PdfName - filename for the PDF document
-\item Abstract - text for the abstract (scraped from the NIPS website)
-\item PaperText - raw text from the PDF document (created using the tool pdftotext)
-\end{itemize}
-
-Our main approach is based on a topic-model like LDA \cite{blei2003latent} which is fit on the entire corpus created by the text from the given papers. The main dataset available on Kaggle provides only around 400 papers. We felt that this would not be sufficient for a good fit of the topic model. Therefore, we went ahead and downloaded all NIPS papers in text format given \href{http://www.cs.nyu.edu/~roweis/data.html}{here}. These were obtained by running OCR on the original pdf files. This dataset contains a total of 1740 papers from the period 2000-2012, resulting in a total dataset of around 2100 papers for us!
-
-\section{Pre-Processing}
-A scientific paper involves a lot of things like text, maths, symbols, images etc. Not all of that is relevant for the generation of an abstracts. It is mainly the text which is required. Hence it was needed that the papers are pre-processed. The following steps were involved in the pre-processing procedure:
-\begin{enumerate}
-\item References were removed from the body of the papers.
-\item All non-ascii characters were removed from the papers.
-\item The abstracts of a paper $i$ was stored in a file a$i$.txt and the body of the paper was stored in a file called p$i$.txt 
-\item A naive method was used to separate the abstract and the body. The dataset does not provide the two separately so python's \textit{find()} method was used to find occurrences of the words \textit{Abstracts} and \textit{Introduction}. A few papers did not have this separation so were ignored.
-\item All the abstracts file were appended to form \textit{Abstracts.txt} and all the papers were appended to form \textit{Papers.txt}
-\end{enumerate}
-After this pre-processing we obtained 1886 paper-abstracts pairs and the corresponding files with papers and abstracts appended.
-
-\section{Initial Approach}
-The first step in our main pipeline is \textit{Sentence Extraction} or \textit{Extractive Summarization}. It involves identifying the most salient sentences of a text. The major downside of applying sentence-extraction techniques to the task of summarization is the loss of coherence in the resulting summary. Nevertheless, sentence extraction summaries can give valuable clues to the main points of a document. We experimented with the following 2 approaches for this task:
-\newpage
-\subsection{Word-Count based approach}
-The Sentence Extraction task is basically ranking the sentences in a document and then selecting the top $k$ sentences to form the summary. In this approach, sentences were ranked in the following way:  
-\begin{algorithm}
-\caption{Word-Count-Based-Extractor}\label{euclid}
-\begin{algorithmic}[1]
-\Procedure{generate\_Summary}{}
-\For{\texttt{<every paper P in corpus>}}
-        \State $\textit{word2freq} \gets frequency \: of \: each \: word \: in \: \textit{P} $ 
-        \State $\textit{score(sentence)} \gets sum([\textit{word2freq}(word) \: for \: word \: in \: sentence])$
-        \State $\textit{score(sentence)} \gets \textit{score(sentence)}/\textit{length(sentence)} $
-        \State \Return Top $K$ sentences such that $K < maxSummarySize$ 
-\EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-\subsection{Topic-Model (LDA) based approach}
-For the purpose of ranking the sentences in a document, a relevance score of the sentence is required. In the previous approach, it was calculated using the frequencies of words in the sentences. This approach uses the similarity between the topic distribution of the entire paper and the topic distribution of an individual sentence (\textbf{number of topics = 20}). Higher this similarity, more is the relevance of the sentence.
-\begin{algorithm}
-\caption{Topic-Model-Based-Extractor}\label{euclid}
-\begin{algorithmic}[1]
-\Procedure{generate\_Summary}{}
-\State $corpus \gets read(Papers.txt)$
-\State $\textit{M} \gets LDA(corpus, nTopics=20)$
-\For{\texttt{<every paper P in corpus>}}
-        \State $\textit{paperTopicVector} \gets M(P.text)$
-        \State $\textit{score(sentence)} \gets 1 - cosineDistance(paperTopicVector, M(sentence))$
-        \State \Return Top $K$ sentences such that $K < maxSummarySize$ 
-\EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-\newpage
-\subsubsection{TOPICS}
-Figure 1 shows the top keywords for few of the topics obtained. It can be seen that \textcolor{red}{Topic 0} corresponds to \textcolor{red}{neural networks}, \textcolor{blue}{Topic 1} to \textcolor{blue}{theorems and proofs}, \textcolor{green}{Topic2} to \textcolor{green}{Bayesian Statistics}, \textcolor{orange}{Topic 8} to \textcolor{orange}{results and experiments} and \textcolor{violet}{Topic 18} to \textcolor{violet}{References} given in papers. 
-\begin{figure}
- \begin{adjustwidth}{-3cm}{}
-\begin{tabular}{ |l | l| } 
- \hline
- Topic 0 & networks layer neural image deep layers convolutional hidden sequence recurrent lstm  \\
- \hline
- Topic 1 & theorem algorithm proof result appendix analysis properties lemma conditions assumptions  \\
- \hline 
-Topic 2 & distribution posterior gaussian inference likelihood sampling variational latent prior markov random \\
- \hline
- Topic 8 & figure results performance data table experiments test datasets error methods accuracy training \\
- \hline
- Topic 18 & 2010 2011 2012 2013 2014 computer science machine learning conference journal ieee proceedings  \\
- \hline
-\end{tabular}
-\end{adjustwidth}
-\caption{Top Keywords}
-\end{figure}
-\section{Results and Conclusions}
-\subsubsection{Evaluation}
-For evaluating the results of these two approaches, we use the ROUGE metric\cite{lin2004rouge}. Under the ROUGE package, 5 metrics are available:
-\begin{itemize}
-\item ROUGE-N: N-gram based co-occurrence statistics.
-\item ROUGE-L: Longest Common Subsequence (LCS) based statistics. Longest common subsequence problem takes into account sentence level structure similarity naturally and identifies longest co-occurring in sequence n-grams automatically.
-\item ROUGE-W: Weighted LCS-based statistics that favors consecutive LCSes .
-\item ROUGE-S: Skip-bigram based co-occurrence statistics. Skip-bigram is any pair of words in their sentence order.
-\item ROUGE-SU: Skip-bigram plus unigram-based co-occurrence statistics.
-\end{itemize}
-We evaluated the abstracts generated from the two approaches using the actual abstracts as reference summaries. For ROUGE-N, $N = 1,2,3,4$ were considered. 
-\newpage
-
-\begin{table}[H]
-
-\label{my-label}
-\begin{tabular}{|l|c|c|c|c|c|c|}
-\hline 
- & \multicolumn{3}{c|}{Word-Count} & \multicolumn{3}{c|}{Topic-Model} \\
- \hline 
-& Recall & Precision      &  F-Score    & Recall     & Precision      &  F-Score           \\
- \hline 
- ROUGE-1&   0.76    &  0.45     &  0.55    &  0.38     &   0.63    &  0.44    \\
- \hline
- ROUGE-2&   0.58    &  0.34     & 0.42     &    0.27   &   0.44    &   0.31   \\
- \hline
- ROUGE-3&    0.50   &   0.29    &  0.36    &   0.23    &  0.39     &  0.27    \\
- \hline
- ROUGE-4&   0.44    &  0.26     &  0.32    &   0.20    &   0.35    &  0.24   \\
- \hline
- ROUGE-L&   0.75    &  0.45     & 0.54     &     0.36  &  0.60    &  0.42    \\
- \hline
- ROUGE-W&    0.24   &  0.25     &  0.24    &    0.12   &   0.37    &    0.17  \\
- \hline
- ROUGE-S&   0.57    &  0.22     &   0.29   &    0.17   &   0.40    &  0.20    \\
- \hline
- ROUGE-SU&  0.57     &   0.21    &   0.29   &   0.17    &    0.40   & 0.21  \\ 
- \hline 
- \textbf{Average} &\textbf{0.55}&\textbf{0.31}&\textbf{0.37}&\textbf{0.24}&\textbf{0.45}&\textbf{0.29} \\
- \hline
-\end{tabular}
-\end{table}
-
-\subsubsection{Observations}
-\begin{itemize}
-\item Word-Count based approach has a better recall than the Topic-Model approach. We feel this is due to the the fact that the topic vector inferred for any individual sentence using the trained model does not provide a comprehensive representation of the sentence. Also the text of the papers needs to pre-processed more and only sections relevant to the summary should be kept. That however would be a subjective decision.
-\item The Topic-Model approach, however, performs better on precision. 
-\end{itemize}
-\section{Further Plan}
-We plan to take the following steps in the remainder of the project:
-\begin{enumerate}
-\item Pre-process the available text in a better manner so as to obtain a better topic model. We intuitively feel that the topic model approach should perform better. We will experiment with other Topic Models like Hierarchical LDA \cite{teh2012hierarchical}.
-\item In case we do not obtain better performance, we will move ahead with the Word-Count approach.
-\item Use a pre-trained RNN-based abstractive sentence summarizer, fine tune it on relevant data somehow and then run it on every sentence in the extractive summary obtained from previous steps.
-\end{enumerate}
-
-\bibliographystyle{unsrt}
-\bibliography{ref}
+	\end{titlepage}
+	
+	
+	\begin{abstract}
+	There are various concepts in probability theory and linear algebra that we keep on forgetting and they keep haunting us throughout our lifetime. I attempt to list and explain a few of them, which I myself need very much. 
+	\end{abstract}	
+	\section{Eigen vectors and Eigen Values}
+	\section{Eigen Value decomposition}
+	\section{Singular value decomposition}
+	\section{Gram Schmidt Orthogonalization}
+	\section{Positive Definite Matrix}
+	
+		A symmetric (Hermitian) $n \times n$ real ( complex) matrix $M$ is said to be Positive Definite if $z^TMz > 0$ for every non-zero vector $z$. In case of positive semidefinite, $z^TMz \ge 0$. 
+		
+		\subsection{Properties of Positive definite matrix}
+			Let $M$ be an $n \times n$ symmetric matrix.
+			\begin{itemize}
+				\item It has positive eigen values. Vice-versa, if a matrix has all it's eigenvalues real and positive, the matrix is positive definite. 
+				\item For any real invertible matrix $A$, \textbf{$A^{T}A$ is always positive definite}
+				\item Positive definite matrix has \textbf{positive determinant}. This means, that PD matrix is always \textbf{nonsingular}
+			\end{itemize}
+	\section{Covariance Matrix}
+	
+		Let $\textbf{X} = \{X_1, X_2 \cdots X_n\}$ be a random vector. Then, 
+		\begin{equation}
+		Cov(\textbf{X}) = [\Sigma]_{n \times n} 
+		\end{equation}
+		where $\Sigma_{ij} = cov(X_i, X_j) = E((X_i - \mu_i)(X_j - \mu_j))$
+		\\
+		Also, Let $\textbf{Y} = \{Y_1, Y_2 \cdots Y_m\}$ be another random vector. Then, 
+		\begin{equation}
+			Cov(\textbf{X, Y}) = E({(\textbf{X} - \mu_\textbf{X})}^T(\textbf{Y} - \mu_\textbf{Y})) = [\Sigma]_{n \times m}
+		\end{equation}
+	
+		\subsection{Covariance}
+			Covariance means how two things(random variables $X_1$ and $X_2$) vary with respect to each other. If on increase of $X_1$, $X_2$ increases and on decrease of $X_1$, $X_2$ decreases, we say covariance is positive. If on increase of $X_1$, $X_2$ decreases and vice versa, we say that covariance is negative. Covariance is 0 if no such relation exists. Understanding the magnitude of covariance is difficult. 
+			\\
+			Mathematically, let $X_1$ and $X_2$ are two real valued random variables. Then Cov($X_1$, $X_2$) = $E[X_1 - \mu_1)\times(X_2-\mu_2)]$
+		
+		
+		\subsection{Properties of Covariance Matrices}
+			\begin{itemize}
+				\item Positive semidefinite
+				\item Symmetric
+				\item If ($m = n$)
+			\end{itemize}
 
 
+	\section{Random Variable}
+		Random variable is a function that maps outcomes of an event to mathematically convenient form (real numbers). For example: Let our event be "\textit{A coin is tossed 30 times}" and let random variable be \textbf{Number of heads occured while tossing 30 times}
+		
+		\subsection{Random Vector}
+			Random vector are used when you want to view multiple events simultaneously. For example: You want to observe tossing of coin ($X_1$) and rolling of dice ($X_2$) simultaneously. Then, you define random vector $\textbf{X} = \{X_1, X_2\}$. Here $X_1: {-1,1}$ and $X_2: {1,2,3,4,5,6}$. In more machine learning pov, you have random vector as your feature set where each feature is a random variable.
+
+	\section{PCA}
+	
 \end{document}
