@@ -1,5 +1,7 @@
 #include<iostream>
+#include<future>
 using namespace std;
+using namespace std::placeholders;
 
 class Math
 {
@@ -28,27 +30,32 @@ public:
 };
 class MathEx :public Math
 {
-    Math::y;
+    using Math::y;
 protected:
     using Math::z;
 public:
     // using Math::AddFun;//vbertical access control
-    void AddFun(int x, int y, int z, int a)
+    void AddFun(int x, int y, int z)
     {
-        cout << "MathEx AddFun(int,int,int,int)" << endl;
+        cout << "MathEx AddFun(int,int,int)" << endl;
     }
+    // void AddFun(int x, int y, int z, int a)
+    // {
+    //     cout << "MathEx AddFun(int,int,int,int)" << endl;
+    // }
     void fun()
     {
         cout << "Mathex (Derived) Fun" << endl;
     }
 };
-void main1()
+
+int main()
 {
     MathEx mathex;
-    mathex.AddFun(10);
+    // mathex.AddFun(10);
     mathex.AddFun(1, 2);
-    mathex.AddFun(11, 22, 33);
-    mathex.AddFun(1, 2, 3, 4);
+    // mathex.AddFun(11, 22, 33);
+    // mathex.AddFun(1, 2, 3, 4);
 
     /*mathex.fun();
     Math math;

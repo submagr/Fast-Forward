@@ -28,7 +28,7 @@
 ```cpp
 CA obj;
 ```
-- Main purpose is **not Initialization**, do not use in constructor. Initialization should be done via initialization list.
+- Main purpose is **not Initialization**, do not use in constructor. Initialization should be done via initialization list. 
 - RAII: Acquire all the resources what obj is going to use. Eg. File pointers 
 - Order of calling in constructor:
     * Base's constructor is called. (in case of multiple base classes left to right)
@@ -58,12 +58,14 @@ CA obj;
 - Protected, Public, Private: Private members are accessible only with the class and friends of class. Private members are accessible in derived class and friends of derived class also.
 - By default, inheritance is **private**
 - Public: as it is; protected: base class's public and protected becomes protected of derived class; Private: public, protected members of base class becomes private of derived
+- Functions in derived class which do not override the functions in base class but have same name will **hide** other functions of the same name in base class.
 
 ## Virtual functions:
 - vptr, virtual table, 
 - Why there was first vptr pointing to address of vtable and then that address actually pointing to virtual table. <TODO>
 - Function appending
 - Function overriding
+- Don't confuse function overloading here: it's basically same func name but different parameters or return type
 - How is code segment referenced. There's is some gap I see 
 - setting the vptr to appropriate vtable: = Prologue of constructor
 - <TODO> Virtual functions on reference and pointers. Expanded through vptr. (Others, normal object: never use vtable, in case of ref and ptrs, normal functions calls don't use vtable; ptrs and refs when call virtual functions, use vtable)
@@ -195,6 +197,7 @@ int arr[5]{1, 2, 3, 4, 5};
 - SmartPointers: Context was how to create a class which can only be created via new
 - Casting operator
 - Lazy load, lazy 
+- Order of initialization always maps to order of declaration
 
 ## HW:
 - Variadic templates with class

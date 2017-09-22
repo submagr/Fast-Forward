@@ -132,6 +132,17 @@ scanf(" %c", &temp);
 
 - CPP initialization of variables to zero => Confirm this once (TODO)
 
+### Function pointers:
+
+         +--------------------+
+         | +---+              |
+         | |+-+|              |
+         | |^ ||              |
+    char *(*fp)( int, float *);
+     ^   ^ ^  ||              |
+     |   | +--+|              |
+     |   +-----+              |
+     +------------------------+
 ### CLIMITS // TODO
 
 # C Fast-Forward
