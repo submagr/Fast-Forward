@@ -5,5 +5,5 @@
 *.gz
 *.bbl
 *.blg
-
+.DS_Store
 
