@@ -121,6 +121,20 @@ vector< vector<int> > Matrix(M, vector<int>(N, -1))
 ```
 
 ### Map
+
+### Enum: 
+- Similar to structs but with restrict values(only integers)
+- 
+```cpp
+typedef
+enum week{
+	Mon, Tues, Wed, Thurs, Fri, Sat, Sun
+}week;
+
+week myDay;
+myDay = Tues; // myDay will have value 1
+```
+
 ## Input Output
 - scanf while reading single characters also reads the available '\n' character. To ignore it: 
 ```cpp
