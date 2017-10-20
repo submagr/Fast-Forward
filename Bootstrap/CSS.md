@@ -14,7 +14,9 @@
     * top, right, bottom, left are used to position it.
 - absolute:
     * Is positioned relative to the nearest *positioned* ancestor
+
 ## Font-Size
+
 ## Viewport:
 - Viewport controls how a page is displayed on mobile devices
 - Without viewport, mobile device will render the page at a typical desktop screen width, scaled to fit the screen
@@ -23,4 +25,14 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 ```
 
+## Display property:
+- The default for most element is usually block or inline
+- display:none => renders the page as if element does not exist 
+- visiblity:hide => will hide the element but space will not be filled
 
+## Height-Width:
+- height, width properties do not include padding, borders or margins
+
+## Html5 Datat Attribute:
+- A custom attribute of any element that stores data
+- data-[only alphabetical word in lowercase is allowed]

@@ -32,6 +32,7 @@ mysite/
 - Each model is a python class that subclasses django.db.models.Model
 - Each attribute of the model represents a database field
 - 
+
 ### TODO: 
 - [https://docs.djangoproject.com/en/1.11/topics/install/#install-apache-and-mod-wsgi](Django in deployement, apache and mod-wsgi)
 - 

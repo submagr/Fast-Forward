@@ -11,4 +11,3 @@
     * sm (for tablets)
     * md (for desktops)
     * lg (for larger desktops)
-
