@@ -16,6 +16,14 @@
     * Is positioned relative to the nearest *positioned* ancestor
 
 ## Font-Size
+Relative lengths:
+- rem: Relative to the font-size of the root element
+- em: Relative to font-size of the element
+- vw(vh): Relative to 1% of the width(height) of the viewport
+- vmin(vmax): Relative to 1% of the viewport's smaller(bigger) dimension
+
+Absoulute Lengths:
+- px: 1/96 inch. (Also equals 1 pixel for low dpi devices) 
 
 ## Viewport:
 - Viewport controls how a page is displayed on mobile devices
@@ -24,6 +32,7 @@
 ```html
 <meta name=viewport content="width=device-width, initial-scale=1">
 ```
+- With respect to the font sizes, viewport refers to width of browser window.
 
 ## Display property:
 - The default for most element is usually block or inline
