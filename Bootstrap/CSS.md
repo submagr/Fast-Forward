@@ -17,7 +17,7 @@
 
 ## Font-Size
 Relative lengths:
-- rem: Relative to the font-size of the root element
+- rem: Relative to the font-size of the root element(for most browser root element is *html* tag: 16px) 
 - em: Relative to font-size of the element
 - vw(vh): Relative to 1% of the width(height) of the viewport
 - vmin(vmax): Relative to 1% of the viewport's smaller(bigger) dimension
