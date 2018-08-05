@@ -40,9 +40,66 @@
 	
 	\begin{abstract}
 	There are various concepts in probability theory and linear algebra that we keep on forgetting and they keep haunting us throughout our lifetime. I attempt to list and explain a few of them, which I myself need very much. 
-	\end{abstract}	
+	\end{abstract}
+	
+	\section {Vector Spaces}
+		Vector Spaces are defined with respect to (set of vectors $V$, scalar multiplication $.$ over $F$ and vector addition $+$). A set of simple mathemetical objects form a vector space when their operations $+$ and $.$ follow following axioms:
+		\begin{gather*}
+			+: V \times V \rightarrow V \\
+			.: F \times V \rightarrow V 
+		\end{gather*}
+		% Please add the following required packages to your document preamble:
+		% \usepackage{graphicx}
+		\begin{table}[H]
+			\centering
+			\caption{Vector Space Properties}
+			\label{my-label}
+			\resizebox{\textwidth}{!}{%
+				\begin{tabular}{|l|l|}
+					\hline
+					\multicolumn{1}{|c|}{\textbf{$+$}} & \multicolumn{1}{c|}{\textbf{$.$}} \\ \hline
+					Associativity $u + (v+w) = (u+v)+w$ & Compatibility $a(bv) = (ab)v$ \\ \hline
+					Commutativity & \begin{tabular}[c]{@{}l@{}}Identity element fo scalar multiplication\\ I.v = v\end{tabular} \\ \hline
+					Identity Element  $\exists 0 \in V$ $v+0 = v \forall v \in V$ & $a(u+v) = au + av$ \\ \hline
+					Inverse Element for every $v \in V, \exists v^{-1} s.t v + v^{-1} = 0$ & $(a+b)v = av + bv$ \\ \hline
+				\end{tabular}%
+			}
+		\end{table}
+		
+	\section {Subspaces}
+	Let $W$ be a subset of vector space $V$ (over field $K$). Then $W$ is called subspace if:
+	\begin{itemize}
+		\item {$0 \in W$}
+		\item {$\forall u,v \in W \implies u+v \in W$}
+		\item {$\forall c \in K$ and $w \in W \implies c.w \in W$}
+	\end{itemize}
+	\section {Linear Transformation}: 
+		Mapping between two vector spaces $V$ and $W$ (usually over same field $F$) such that operation is preserved. That is, applying the mapping before or after the operation should not matter. 
+		\begin{gather*}
+			f(u+v) = f(u) + f(v) \\
+			f(cu) = cf(u)
+		\end{gather*}
+
 	\section{Eigen vectors and Eigen Values}
+		Eigen Vector and Eigen values are defined with respect to Linear transformation and corresponding vector spaces. A vector is called an eigen vector wrt a particular linear trasformation if it is only scaled by a fixed value (called eigen value) on applying the linear transformation.
+		\begin{gather*}
+			T(\textbf{v}) = \lambda \textbf{v}
+		\end{gather*}
+		There is a correspondence between n by n square matrices and linear transformations from an n-dimensional vector space to itself. For this reason, it is equivalent to define eigenvalues and eigenvectors using either the language of matrices or the language of linear transformations.
+		
+		For a matrix, eigenvalues and eigenvectors can be used to decompose the matrix, for example by diagonalizing it.
+	\section {Matrix Similarity}
+	In linear algebra, two $n$-by-$n$ matrices $A$ and $B$ are called similar if 
+	\begin{gather*}
+		B = P^{-1}AP
+	\end{gather*}
+	for some invertible $n$-by-$n$ matrix $P$.
+	\section {Diagonalizable Matrix}
+	A matrix is called diagonalizable, if it's similar to a diagonal matrix.
+	
+	These matrices are of interest because of their ease of handling.
 	\section{Eigen Value decomposition}
+	
 	\section{Singular value decomposition}
 	\section{Gram Schmidt Orthogonalization}
 	\section{Positive Definite Matrix}
