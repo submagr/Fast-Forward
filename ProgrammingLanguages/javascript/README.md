@@ -162,3 +162,17 @@ This can improve page load, because script compilation can slow down the display
     ```
 - Security concerns:
     * Browsers do not allow access across different domains, i.e., `someUrl` in the example above must be inside domain of the referring website
+
+## Javascript Imports, Exports, Modules:
+ECMA6 support imports. But Browsers are yet to migrate to ECMA6. There are various methods via which one can split the javascript code in multiple files.
+- JQuery
+- Ajax Requests and eval
+- Javascript Compilers like webpack
+
+## Webpack
+- static module bundler
+- Core concepts
+    * Entry - Which js to treat as entry point js
+    * Output - 
+    * Loaders
+    * Plugin
