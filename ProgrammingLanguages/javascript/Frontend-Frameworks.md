@@ -12,4 +12,6 @@ For this, I google how to write "modular", "importable" code in javascript that 
 Reference: [how-do-i-include-a-javascript-file-in-another-javascript-file](https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file)
 
 
-The method I am going ahead with: I am going ahead with is Dynamic script loading. It seems simple. Morevoer, my requirement is pretty small here: split up the code to avoid duplicacy. I am not concerned right now with efficiency and scalability. Moreover, in this way, when I will use more advanced tools like webpack, babel etc.I will already know what are their exact benefits.
+> The method I am going ahead with: I am going ahead with is Dynamic script loading. It seems simple. Morevoer, my requirement is pretty small here: split up the code to avoid duplicacy. I am not concerned right now with efficiency and scalability. Moreover, in this way, when I will use more advanced tools like webpack, babel etc.I will already know what are their exact benefits.
+
+Soon I realized that the above will not solve my problem. Because I cannot import files inside files which are themselves imported somewhere else. I decide to go with babel and webpack for this functioning.
