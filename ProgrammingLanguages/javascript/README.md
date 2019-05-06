@@ -176,3 +176,8 @@ ECMA6 support imports. But Browsers are yet to migrate to ECMA6. There are vario
     * Output - 
     * Loaders
     * Plugin
+
+## Error Object:
+- has two properties: name and message
+- error name has six different properties: EvalError, RangeError, ReferenceError, SyntaxError, TypeError, URIError.
+- One can also create a custom error.
